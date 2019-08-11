@@ -137,6 +137,6 @@ deploy-android-alpha:
     before_script:
         - echo "${GOOGLE_PLAY_API_KEY}" > fastlane/api_key.json
     script:
-        - APK_ARM_PATH=$PWD/onvifviewer_build_apk-release-signed-arm.apk APK_AARCH64_PATH=$PWD/onvifviewer_build_apk-release-signed-aarch64.apk fastlane upload_alpha
+        - APK_PATH=$PWD fastlane upload_alpha
     after_script:
         - rm fastlane/api_key.json
